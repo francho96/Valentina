@@ -212,7 +212,7 @@ export default function Example() {
                             <div className="rounded-md shadow">
                               <a
                                 href="/trabajos"
-                                className="flex w-full items-center justify-center rounded-md border border-transparent bg-black px-8 py-3 text-base font-medium text-white hover:bg-gray-700 md:py-4 md:px-10 md:text-lg"
+                                className="flex font-serif font-bold w-full items-center justify-center rounded-md border border-transparent bg-black px-8 py-3 text-base font-medium text-white hover:bg-gray-700 md:py-4 md:px-10 md:text-lg"
                               >
                                 <nav> <Link to="/trabajos"></Link> </nav>
                                 Ver Trabajos
@@ -223,7 +223,7 @@ export default function Example() {
                             <div className="mt-3 sm:mt-0 sm:ml-3">
                               <a
                                 href="/contacto"
-                                className="flex w-full items-center justify-center rounded-md border border-transparent bg-gray-300 px-8 py-3 text-base font-medium text-black hover:bg-gray-200 md:py-4 md:px-10 md:text-lg"
+                                className="flex font-serif font-bold w-full items-center justify-center rounded-md border border-transparent bg-gray-300 px-8 py-3 text-base font-medium text-black hover:bg-gray-200 md:py-4 md:px-10 md:text-lg"
                               >
                                 Contactar
                               </a>
