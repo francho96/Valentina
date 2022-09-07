@@ -1,12 +1,12 @@
 /* This example requires Tailwind CSS v2.0+ */
+
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition, Popover } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
-
+import { Link } from "react-router-dom";
 import index  from './pages/img/index2.png'
-import trabajos from './pages/trabajos'
+import logo from './pages/img/logo.png'
 
 const user = {
   name: 'Tom Cook',
@@ -16,24 +16,26 @@ const user = {
 }
 
 const navigation = [
-  { name: 'Inicio', href: '/', exp: 'inicio',current: true },
-  { name: 'Trabajos', href: '/trabajos', exp: 'trabajos',  current: false },
-  { name: 'Contacto', href: '/comtacto', exp: 'contacto', current: false },
+  { name: 'Inicio', href: '/', exp: "inicio" ,current: true },
+  { name: 'Trabajos', href: '/trabajos', current: false },
+  { name: 'Contacto', href: '/contacto', current: false },
 
-]
-
-const items = [
-  { id: 1 },
-  // More items...
 ]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+
+const items = [
+  { id: 1 },
+  // More items...
+]
 export default function Example() {
   return (
+       
     <>
+
       {/*
         This example requires updating your template:
 
@@ -54,12 +56,13 @@ export default function Example() {
                         <div className="flex-shrink-0">
                           <img
                             className="h-8 w-8"
-                            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                            alt="Your Company"
+                            src={logo}
+                            alt="Valentina Terán"
                           />
                         </div>
                           <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-4">
+                              
                               {navigation.map((item) => (
                                 <a
                                   key={item.name}
@@ -71,12 +74,11 @@ export default function Example() {
                                     'px-3 py-2 rounded-md text-sm font-medium font-serif text-base'
                                   )}
                                   aria-current={item.current ? 'page' : undefined}
+                                  
                                 >
 
+                                    <nav> <Link to={item.href}></Link> </nav>
 
-
-                                  <Router><div><Link to={item.href}></Link>  <Routes path={item.href} component={item.exp}/></div> </Router>
-                                  
 
 
                                   {item.name}
@@ -209,15 +211,18 @@ export default function Example() {
                           <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                             <div className="rounded-md shadow">
                               <a
-                                href=""
+                                href="/trabajos"
                                 className="flex w-full items-center justify-center rounded-md border border-transparent bg-black px-8 py-3 text-base font-medium text-white hover:bg-gray-700 md:py-4 md:px-10 md:text-lg"
                               >
+                                <nav> <Link to="/trabajos"></Link> </nav>
                                 Ver Trabajos
+                                
                               </a>  
+                              
                             </div>
                             <div className="mt-3 sm:mt-0 sm:ml-3">
                               <a
-                                href="#"
+                                href="/contacto"
                                 className="flex w-full items-center justify-center rounded-md border border-transparent bg-gray-300 px-8 py-3 text-base font-medium text-black hover:bg-gray-200 md:py-4 md:px-10 md:text-lg"
                               >
                                 Contactar
