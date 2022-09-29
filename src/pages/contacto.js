@@ -1,11 +1,14 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
+import { Fragment, userRef } from 'react'
 import { Disclosure, Menu, Transition, Popover } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from "react-router-dom";
+import emailjs from '@emailjs/browser';
+
+
 import index  from './img/index2.png'
 import logo from './img/logo.png'
-
+import contact from './img/contact.png'
 
 const items = [
   { id: 1 },
@@ -24,6 +27,18 @@ function classNames(...classes) {
 }
 
 export default function contacto() {
+  /*const form = userRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_gvojx6t', 'template_3weuink', form.current, 'F6fbdww55OpDfF57e')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };*/
   return (
        
     <>
@@ -46,11 +61,14 @@ export default function contacto() {
                     <div className="flex h-16 items-center justify-between px-4 sm:px-0">
                       <div className="flex items-center">
                         <div className="flex-shrink-0">
-                          <img
-                            className="h-8 w-8"
-                            src={logo}
-                            alt="Valentina Terán"
-                          />
+                          <a href= '/'>
+                              <img
+                              className="h-8 w-8"
+                              src={logo}
+                              alt="Valentina Terán"
+                              href= '/'
+                              />                          
+                            </a>
                         </div>
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-4">
@@ -198,10 +216,91 @@ export default function contacto() {
 
                           </h1>
                             <p className="mt-3 text-base text-black font-serif sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">
-                                Para presupuesto y/o otras consultas sobre el trabajo, se solicita contactar mediante el siguiente formulario:
+                                Para presupuesto y/o otras consultas sobre el trabajo, se solicita contactar mediante el siguiente formulario: <br></br><br></br> 
                              </p>
                           
                         </div>
+                        <div class="p-8 bg-[url('./pages/img/contact.png')] font-serif rounded-lg shadow-lg lg:p-12 lg:col-span-3">
+        <form action="" class="space-y-4">
+          <div>
+            <label class="sr-only" for="name">Name</label>
+            <input
+              class="w-full p-3 text-sm border-gray-500 rounded-lg"
+              placeholder="Nombre completo"
+              type="text"
+              id="name"
+              name="user_name"
+            />
+          </div>
+
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div>
+              <label class="sr-only" for="email">Email</label>
+              <input
+                class="w-full p-3 text-sm border-gray-200 rounded-lg"
+                placeholder="Correo electrónico"
+                type="email"
+                id="email"
+                name="user_email"
+              />
+            </div>
+
+            <div>
+              <label class="sr-only" for="phone">Phone</label>
+              <input
+                class="w-full p-3 text-sm border-gray-200 rounded-lg"
+                placeholder="Número de telefono"
+                type="tel"
+                id="phone"
+                name="user_phone"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 gap-4 text-center sm:grid-cols-3">
+            
+
+            
+
+          </div>
+
+          <div>
+            <label class="sr-only" for="message">Message</label>
+            <textarea
+              class="w-full p-3 text-sm border-gray-200 rounded-lg"
+              placeholder="Mensaje"
+              rows="8"
+              id="message"
+              name="message"
+            ></textarea>
+          </div>
+
+          <div class="mt-4">
+            <button
+              type="submit"
+              value="Send"
+              class="inline-flex items-center justify-center w-full px-5 py-3 text-white bg-black rounded-lg sm:w-auto"
+            >
+              <span class="font-medium"> Enviar </span>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 ml-3"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
                           
 
  
