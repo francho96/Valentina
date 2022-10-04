@@ -1,5 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment, userRef } from 'react'
+import { Fragment, useRef, useState} from 'react'
 import { Disclosure, Menu, Transition, Popover } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from "react-router-dom";
@@ -26,19 +26,24 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function contacto() {
-  /*const form = userRef();
+
+export default function Contacto() {
+  
+  const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_gvojx6t', 'template_3weuink', form.current, 'F6fbdww55OpDfF57e')
+    emailjs.sendForm('service_gvojx6t', 'template_5kltrvy', form.current, 'F6fbdww55OpDfF57e')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
           console.log(error.text);
       });
-  };*/
+  };
+  
+
+
   return (
        
     <>
@@ -221,7 +226,7 @@ export default function contacto() {
                           
                         </div>
                         <div class="p-8 bg-[url('./pages/img/contact.png')] font-serif rounded-lg shadow-lg lg:p-12 lg:col-span-3">
-        <form action="" class="space-y-4">
+        <form ref={form} onSubmit={sendEmail} class="space-y-4">
           <div>
             <label class="sr-only" for="name">Name</label>
             <input
@@ -244,23 +249,18 @@ export default function contacto() {
                 name="user_email"
               />
             </div>
-
             <div>
               <label class="sr-only" for="phone">Phone</label>
               <input
                 class="w-full p-3 text-sm border-gray-200 rounded-lg"
-                placeholder="Número de telefono"
+                placeholder="Número de teléfono"
                 type="tel"
                 id="phone"
                 name="user_phone"
               />
             </div>
           </div>
-
-          <div class="grid grid-cols-1 gap-4 text-center sm:grid-cols-3">
-            
-
-            
+          <div class="grid grid-cols-1 gap-4 text-center sm:grid-cols-3">        
 
           </div>
 
@@ -276,11 +276,13 @@ export default function contacto() {
           </div>
 
           <div class="mt-4">
+
             <button
               type="submit"
-              value="Send"
               class="inline-flex items-center justify-center w-full px-5 py-3 text-white bg-black rounded-lg sm:w-auto"
+
             >
+              
               <span class="font-medium"> Enviar </span>
 
               <svg
@@ -298,6 +300,7 @@ export default function contacto() {
                 />
               </svg>
             </button>
+            
           </div>
         </form>
       </div>
