@@ -2,7 +2,7 @@
 import { Fragment, useRef, useState} from 'react'
 import { Disclosure, Menu, Transition, Popover } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 
 
@@ -27,7 +27,6 @@ function classNames(...classes) {
 export default function Contacto() {
   
   const form = useRef();
-  const navigate = useNavigate();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -35,7 +34,6 @@ export default function Contacto() {
     emailjs.sendForm('service_gvojx6t', 'template_5kltrvy', form.current, 'F6fbdww55OpDfF57e')
       .then((result) => {
           console.log(result.text);
-          navigate('/enviado');
       }, (error) => {
           console.log(error.text);
       });
@@ -216,93 +214,25 @@ export default function Contacto() {
                       <main className="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                         <div className="sm:text-center lg:text-left">
                           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl font-serif">
-                            <span className="block xl:inline"><br></br>Contacto</span>{' '}
+                            <span className="block xl:inline"><br></br>El formulario ha sido enviado</span>{' '}
 
                           </h1>
                             <p className="mt-3 text-base text-black font-serif sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">
-                                Para presupuesto y/o otras consultas sobre el trabajo, se solicita contactar mediante el siguiente formulario: <br></br><br></br> 
+                            En breve se leerá el mensaje enviado y se contactará con los datos proporcionados<br></br><br></br> 
                              </p>
                           
                         </div>
-                        <div class="p-8 bg-[url('./pages/img/contact.png')] font-serif rounded-lg shadow-lg lg:p-12 lg:col-span-3">
-        <form ref={form} onSubmit={sendEmail} class="space-y-4">
-          <div>
-            <label class="sr-only" for="name">Name</label>
-            <input
-              class="w-full p-3 text-sm border-gray-500 rounded-lg"
-              placeholder="Nombre completo"
-              type="text"
-              id="name"
-              name="user_name"
-            />
-          </div>
-
-          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div>
-              <label class="sr-only" for="email">Email</label>
-              <input
-                class="w-full p-3 text-sm border-gray-200 rounded-lg"
-                placeholder="Correo electrónico"
-                type="email"
-                id="email"
-                name="user_email"
-              />
-            </div>
-            <div>
-              <label class="sr-only" for="phone">Phone</label>
-              <input
-                class="w-full p-3 text-sm border-gray-200 rounded-lg"
-                placeholder="Número de teléfono"
-                type="tel"
-                id="phone"
-                name="user_phone"
-              />
-            </div>
-          </div>
-          <div class="grid grid-cols-1 gap-4 text-center sm:grid-cols-3">        
-
-          </div>
-
-          <div>
-            <label class="sr-only" for="message">Message</label>
-            <textarea
-              class="w-full p-3 text-sm border-gray-200 rounded-lg"
-              placeholder="Mensaje"
-              rows="8"
-              id="message"
-              name="message"
-            ></textarea>
-          </div>
-
-          <div class="mt-4">
-
-            <button
-              type="submit"
-              class="inline-flex items-center justify-center w-full px-5 py-3 text-white bg-black rounded-lg sm:w-auto"
-
-            >
-              
-              <span class="font-medium"> Enviar </span>
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-5 h-5 ml-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-            </button>
-            
-          </div>
-        </form>
-      </div>
+                        <div className="rounded-md shadow">
+                              <a
+                                href="/"
+                                className="flex font-serif font-bold w-full items-center justify-center rounded-md border border-transparent bg-black px-8 py-3 text-base font-medium text-white hover:bg-gray-700 md:py-4 md:px-10 md:text-lg"
+                              >
+                                <nav> <Link to="/"></Link> </nav>
+                                Ir al inicio
+                                
+                              </a>  
+                              
+                            </div>
                           
 
  

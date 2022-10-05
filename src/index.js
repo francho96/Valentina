@@ -13,6 +13,7 @@ import { render } from "react-dom";
 import App from "./App";
 import Trabajos from './pages/trabajos';
 import Contacto from './pages/contacto';
+import Enviado from './pages/enviado';
 
 import './index.css';
 
@@ -35,6 +36,7 @@ render(
       <Route path="/" element={<App />} />
       <Route path="trabajos" element={<Trabajos />} />
       <Route path="contacto" element={<Contacto />} />
+      <Route path="enviado" element={<Enviado />} />
     </Routes>
   </BrowserRouter>,
   rootElement
