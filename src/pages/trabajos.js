@@ -30,10 +30,10 @@ function classNames(...classes) {
 }
 
 const files = [
-  { title: 'Como duele la espina', size: '06/Sept/2022', href: "https://www.instagram.com/p/CiLcxEXO7sz/", source: i1 },
-  { title: 'Franco', size: '02/Sept/2022', href: "https://www.instagram.com/p/CiBWtqcOnrw/", source: i2 },
-  { title: 'Mi fav', size: '29/Agost/2022', href:"https://www.instagram.com/p/Ch283QeuHQE/", source: i3 },
-  { title: 'Sempiterno I', size: '16/Agost/2022', href: "https://www.instagram.com/p/ChVF-1IOLZx/", source: i4 },
+  { title: 'Como duele la espina', size: '06/Sept/2022', href: "https://scontent-scl2-1.cdninstagram.com/v/t51.2885-15/305569442_869060327427981_4369998265454828620_n.jpg?stp=dst-jpg_e35_p640x640_sh0.08&_nc_ht=scontent-scl2-1.cdninstagram.com&_nc_cat=109&_nc_ohc=gw8V2DPGPDAAX-uDHvJ&edm=ALQROFkBAAAA&ccb=7-5&ig_cache_key=MjkyMTU1NTI5NDQ4MTUxOTU5OQ%3D%3D.2-ccb7-5&oh=00_AT9lekuGoan8Gn_qLgI3Z2gGMe-QYPgGN_LAv50gd5IdrQ&oe=63500D33&_nc_sid=30a2ef", source: i1 },
+  { title: 'Franco', size: '02/Sept/2022', href: "https://scontent-scl2-1.cdninstagram.com/v/t51.2885-15/303897749_3240379239550436_1110665257752925339_n.jpg?stp=dst-jpg_e35_p640x640_sh0.08&_nc_ht=scontent-scl2-1.cdninstagram.com&_nc_cat=108&_nc_ohc=np-UIZY5yAAAX9f8Vh1&edm=ALQROFkBAAAA&ccb=7-5&ig_cache_key=MjkxODcxMzkyMjY2OTkzNTgyMw%3D%3D.2-ccb7-5&oh=00_AT9F5twdUuMwDj6XIVWDFpz9djLhMd1tQGjjhOMwQFAC3w&oe=63502AC2&_nc_sid=30a2ef", source: i2 },
+  { title: 'Mi fav', size: '29/Agost/2022', href:"https://scontent-scl2-1.cdninstagram.com/v/t51.2885-15/301722869_128821773223784_3672834238085664351_n.jpg?stp=dst-jpg_e35&_nc_ht=scontent-scl2-1.cdninstagram.com&_nc_cat=108&_nc_ohc=0y6lGdpUnhwAX-YEHR-&edm=ALQROFkBAAAA&ccb=7-5&ig_cache_key=MjkxNTc4NTQ4ODgyNjEzNTU1Ng%3D%3D.2-ccb7-5&oh=00_AT8MuX0iP6If7caPIQ7rOBcom8XS3YwJNheBTKwc-dr1ZA&oe=6350E7E6&_nc_sid=30a2ef", source: i3 },
+  { title: 'Sempiterno I', size: '16/Agost/2022', href: "https://scontent-scl2-1.cdninstagram.com/v/t51.2885-15/299747074_601560721551389_5364029036753834792_n.jpg?stp=dst-jpg_e35_s640x640_sh0.08&_nc_ht=scontent-scl2-1.cdninstagram.com&_nc_cat=105&_nc_ohc=1LPo4qq96ssAX8Izn9w&edm=ALQROFkBAAAA&ccb=7-5&ig_cache_key=MjkwNjI1NTQ0MjQyMzg4NzQ3Mw%3D%3D.2-ccb7-5&oh=00_AT8k5R3CPY8qaMtr7ha5iPPysbpGSTL9x_bQ_VhwXq0A4g&oe=63504A95&_nc_sid=30a2ef", source: i4 },
   { title: 'Laguna arcoiris', size: '23/Abril/2020', href: "https://instagram.fscl17-1.fna.fbcdn.net/v/t51.2885-15/94253029_522035518701051_8391679627586760333_n.jpg?stp=dst-jpg_e15_fr_s1080x1080&_nc_ht=instagram.fscl17-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=QMGImMQapZYAX-lwJM3&edm=ALQROFkBAAAA&ccb=7-5&ig_cache_key=MjI5Mzk2NjQyMjUyMjk1NDQ1NA%3D%3D.2-ccb7-5&oh=00_AT8UVzrgxmVIcElhMMZFA3kH2dvfDuvHCfNCGo4UPOxf9g&oe=633C17A8&_nc_sid=30a2ef",  source: i5 },
   { title: 'Cenicienta', size: '25/Agost/2022', href: "https://instagram.fscl17-1.fna.fbcdn.net/v/t51.2885-15/300962152_1261718974658440_3851166549380674912_n.jpg?stp=dst-jpg_e35_p750x750_sh0.08&_nc_ht=instagram.fscl17-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=sxT8O7VY0iIAX9IQ6JZ&edm=ALQROFkBAAAA&ccb=7-5&ig_cache_key=MjkxMjg3OTM1MDIxNjYzNTQxMA%3D%3D.2-ccb7-5&oh=00_AT92n6J9XRFOwXKFpf4NCSub2U6Lou1A88613L5dw35q7A&oe=633C4FF6&_nc_sid=30a2ef", source: i6 },
   // More files...
@@ -241,7 +241,7 @@ export default function trabajos() {
                             <ul role="list" className="grid grid-cols-2 gap-x-4 font-serif gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
                               {files.map((file) => (
                                 <li key={file.source} className="relative" >
-                                  <a href={file.href}>
+                                  <a href={file.href} target="_blank">
                                   <div className="group aspect-w-10 font-serif aspect-h-7 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-gray-600 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
                                     <img src={file.source} alt="" className="pointer-events-none object-cover group-hover:opacity-75" />
                                     <button type="button" className="absolute inset-0 focus:outline-none">
